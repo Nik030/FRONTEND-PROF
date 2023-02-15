@@ -1,0 +1,37 @@
+/* Set the font family and background color for the page */
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(152,122,43);
+    background: linear-gradient(0deg, rgba(152,122,43,1) 0%, rgba(214,158,38,1) 100%);
+  }
+  
+  /* Center the main heading */
+  h1 {
+    text-align: center;
+  }
+  
+  /* Style the photo gallery */
+  div {
+    margin: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f8e2;
+    box-shadow: 5px 5px 10px #888;
+  }
+  
+  /* Style the image and caption */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  
