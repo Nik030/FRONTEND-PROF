@@ -1,4 +1,4 @@
-# Here you can fine all my projects. Welcome!
+# Here you can find all of my projects. Welcome!
 ChatGPT small projects:
 
 1 - https://nik030.github.io/FRONTEND-PROF/PROF%20FRONTEND/My_projects/chatGPT/
