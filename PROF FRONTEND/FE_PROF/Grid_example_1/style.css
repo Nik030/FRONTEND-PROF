@@ -1,0 +1,44 @@
+/* урок 09.02 */
+
+body {
+  background-color: gray;
+}
+.grid-container {
+  min-height: 100vh; /* 1vh - 1% от размера высоты страницы */
+  /* 1vw - 1% от размера ширины страницы */
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template:
+    "header  header  header aside2"
+    "main    main    aside aside2"
+    "footer  footer  footer aside2"
+    "footer2 footer2 footer2 footer2";
+}
+
+.grid-container > header {
+  grid-area: header;
+  background: greenyellow;
+}
+.grid-container > main {
+  grid-area: main;
+  background: yellow;
+}
+.grid-container > aside {
+  grid-area: aside;
+  background: blue;
+}
+.grid-container > footer {
+  grid-area: footer;
+  background: darkcyan;
+}
+.grid-container > aside2 {
+    grid-area: aside2;
+    background: green;
+}
+.grid-container > footer2 {
+    grid-area: footer2;
+    background: darkorange;
+}

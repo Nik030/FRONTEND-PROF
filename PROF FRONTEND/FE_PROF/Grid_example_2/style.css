@@ -1,0 +1,39 @@
+/* урок 09.02 */
+
+body {
+    background-color: gray;
+  }
+  .grid-container {
+    min-height: 100vh; /* 1vh - 1% от размера высоты страницы */
+    /* 1vw - 1% от размера ширины страницы */
+    background-color: white;
+  
+    display: grid;
+    grid-template-columns: [col1] 50px [col2] 50px [col3] 50px [col4] 50px [col5];
+    grid-template-rows: [row1] 50px [row2] 50px [row3] 50px [row4] 50px;
+  }
+  
+  .grid-container > header {
+    background: greenyellow;
+
+    grid-column: col1 / col5;  /* идет включительно до col4 поэтому добавляем пустую col5 */
+    grid-row: row1 / row1;
+  }
+  .grid-container > main {
+    background: yellow;
+
+    grid-column: col1 / col3;
+    grid-row: row2 / row4;
+  }
+  .grid-container > aside {
+    background: blue;
+
+    grid-column: col4 / col5;
+    grid-row: row2 / row4;
+  }
+  .grid-container > footer {
+    background: darkcyan;
+
+    grid-column: col1 / col5;
+    grid-row: row4 / row4;
+  }

@@ -1,0 +1,23 @@
+.main {
+    width: 500px;
+    height: 500px;
+    background-color:  green;
+}
+
+@media(max-width: 1240px) {
+    .main{
+        background-color:blue;
+    }  
+}
+@media(max-width: 840px) {
+    .main{
+        background-color: orange;
+    }  
+}
+@media(max-width: 640px) {
+    .main{
+        background-color: black;
+    }  
+}
+
+
