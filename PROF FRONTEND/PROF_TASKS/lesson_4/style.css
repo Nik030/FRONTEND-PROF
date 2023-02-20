@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+#services {
+    max-width: 1100px;
+    margin: 20px auto;
+    outline: 1px solid black; /* как border, но с абсолютным позиционированием */
+}
+
+#services .offers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* адаптивно располагает элементы которые не вмещаются */
+    grid-auto-rows: 360px;
+    gap: 20px;
+
+}
+
+#services .offers-container div {
+    background-image: url('./Bg.png');
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: aliceblue;
+}
+
+
+
+#services .offers-container .icon {
+    font-size: 100px;
+    margin: auto auto; /* иконка отцентровывается */
+
+}
+
+#services .offers-container p {
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 48px;
+    padding: 50px 30px;
+}
+#services .subheader {
+    font-size: 24px;
+    color: rgb(165, 165, 165);
+    padding-left: 30px;
+}
+
