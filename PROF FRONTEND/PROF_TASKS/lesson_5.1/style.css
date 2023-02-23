@@ -1,0 +1,31 @@
+/*  делаем значек скидки  */
+
+
+
+.product {
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.product[data-sale]::after{   /* псевдо-элемент */
+    content: attr(data-sale);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%); /* вправо на 50% от своего размера и вверх */
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: tomato;
+    color: white;
+    font-weight: 900;
+}
+

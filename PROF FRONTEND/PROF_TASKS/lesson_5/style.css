@@ -1,0 +1,60 @@
+.target {
+    margin-bottom: 50px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    transition: background-color 1s;
+
+}
+
+.target:hover {  /* псевдо-класс */
+    background-color: aqua;
+
+}
+
+.main {
+    width: 280px;
+    height: 280px;
+    border: 10px solid black;
+    transition: border-radius 1s;
+    position: relative;
+}
+
+.main:hover {
+    border-radius: 50%;
+}
+
+.inner {
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left, top;
+    /* если не указать, будет анимировать все стили */
+    transition-duration: 0.5s;
+}
+
+.main:hover .inner {
+    top: 50%;
+    left: 50%;
+}
+
+
+
+.main2 {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    font-size: 40px;
+}
+
+.main2 p {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.main2:hover p {
+    opacity: 1;
+}
