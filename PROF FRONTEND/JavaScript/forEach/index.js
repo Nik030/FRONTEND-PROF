@@ -74,7 +74,7 @@ console.log(result3);
 
 
 function map(arr, callback) {
-    let newArr = [];
+    const newArr = [];
     forEach(arr, function(element){
         newArr.push(callback(element));
     });
