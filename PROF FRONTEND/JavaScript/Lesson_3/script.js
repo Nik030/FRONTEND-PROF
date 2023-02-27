@@ -25,7 +25,6 @@ const products = [
     {id: 5, title: 'сноуборд', price: 2000, discount: 0},
     {id: 6, title: 'коньки', price: 1700, discount: 10}
 ]
-
-products.id.forEach(function (item) {
-   console.log(title);  
+products.forEach(function (products) {
+   console.log(products.title);  
 })
