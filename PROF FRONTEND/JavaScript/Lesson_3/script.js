@@ -6,3 +6,11 @@ arr.forEach(function (item) {
         console.log(item);
     }    
 })
+
+
+// только четные числа
+arr.forEach(function (item) {
+    if (item % 2 === 0) {
+        console.log(item);
+    }    
+})
