@@ -28,3 +28,65 @@ const products = [
 products.forEach(function (products) {
    console.log(products.title);  
 })
+
+// вывести наименования товаров у которых скидка равна 0
+products.forEach(function (products) {
+    if(products.discount === 0) {
+        console.log(products.title);
+    }  
+ })
+
+
+
+function sum(a, b) {
+    console.log(a + b);
+}
+function sub(a, b) {
+    console.log(a - b);
+}
+function multiply(a, b) {
+    console.log(a * b);
+}
+function calculation(func) {
+    func(12, 4);
+}
+
+calculation(sum);
+calculation(sub);
+calculation(multiply);
+
+
+
+
+
+
+// function handler() {
+//     console.log('привет');
+// }
+// setInterval(handler,100); // вызывается каждые 100 милисекунд
+
+// // либо
+// setInterval(function() {
+//     console.log('привет');
+// }, 100)
+
+
+
+
+// используя метод map сформировать массив который состоит из цен продуктов
+
+const result = products.map(function (product) {
+    return product.price
+})
+console.log(result);
+
+
+// используя метод map сформировать массив из объектов со свойствами title, price
+const result2 = products.map(function (item) {
+    const newProduct = {
+        title: item.title,
+        price: item.price
+    }
+    return newProduct
+})
+console.log(result2);
