@@ -92,7 +92,8 @@ console.log(newArray);
 
 
 /*
-function filter(arr, callback) {}
+function filter(arr, callback) {} 
+// этот callback принимает 3 аргумента: элемент массива, индекс этого элементе и сам массив. возвращает толлько true/false
 
 const array = [1,2,3,4,5,6,7,8,9,10];
 
