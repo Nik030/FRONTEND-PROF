@@ -118,12 +118,57 @@
 // console.log(arr);
 
 
-
-
+///////////////////////
+// a и b - числа
 function sum(a, b) {
     return a + b;
 }
 
 console.log(sum(2, 5)); // 7
 console.log(sum(1, 0)); // 1
-console.log(sum([1, 2, 3], "123" ));
+
+
+// arr - массив ; pow - степень в которую надо возвести
+function copy(arr, pow) {
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i] ** pow);
+    }
+    return newArr;
+}
+console.log(copy([1, 2, 3], 2)); // [1, 4, 9]  pow - степень
+console.log(copy([1, 2, 3], 3)); // [1, 8, 27]
+
+
+///////////////////////
+
+// arr - массив; callback - функция с одним параметром = элементу массива
+// функция  forEach  последовательно перебирает все элементы массива с 0 по последний и вызывает функцию callback для каждого отдельного элемента массива
+
+// function forEach(arr, callback) {
+//     for (let i = 0; i < arr.length; i++) {
+//         const item = arr[i];
+//         callback(item);
+//     }
+// }
+
+// forEach([1, 2, 3, 4, 5], function (item) {
+//     console.log("Hello my dear item", item);
+// });
+
+
+
+
+// функия forEach последовательно перебирает все элементы массива с 0 по последний и вызывает функцию callback для каждого отдельного элемента массива, ЕСЛИ функция condition для этого элемента вернула true
+
+// function forEach(arr, callback, condition) {
+//     for (let i = 0; i < arr.length; i++) {
+//         const item = arr[i];
+//         if (condition(item) == true) {
+//             callback(item);
+//         }
+//     }
+// }
+
+// forEach([1, 2, 3, 4, 5, 6], function (item) {console.log("Hello my dear item", item)}, function (item) { return item > 2;});
+
