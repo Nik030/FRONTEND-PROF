@@ -75,3 +75,36 @@ console.log(
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].reduce((accumulator, current) => accumulator * current)
 );
 //3628800
+
+
+
+const objectsArray = [
+  {
+    name: 'piotr',
+    age: 18,
+    gender: false
+  },
+  {},
+  {}
+];
+
+objectsArray
+.filter(el => el.gender)
+.filter(el => el.age >= 21)
+.map(el => ({
+  name: el.name,
+  isAdult: true,
+  money: el.money
+}))
+.reduce((accumulator, current) => accumulator + current.money, 0);
+
+
+
+// функция сорт отсортирует и перезапишет текущий массив
+[].sort((a, b) => {
+  return a - b;
+});
+
+
+
+// сделайте функцию которая считает цифры фибоначи не используя рекурсию
