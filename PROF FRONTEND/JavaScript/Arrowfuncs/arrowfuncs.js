@@ -97,7 +97,7 @@ const double = arg1 => {
 
 //// фунция map в виде стрелочной функции
 function forEach(arr, callback) {
-    for (let i = 0; i < arr.lenght; i++) {
+    for (let i = 0; i < arr.length; i++) {
       callback(arr[i], i, arr);
     }
   }
