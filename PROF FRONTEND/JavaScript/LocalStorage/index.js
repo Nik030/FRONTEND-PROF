@@ -1,4 +1,11 @@
+
+
+
+
 const button = document.querySelector("input[type='button']");
 const newToDoInput = document.querySelector("input[type='text']");
 
-button.addEventListener("click", event => console.log(newToDoInput.value)) // вешаем обработчик события на кнопку
+const handleAdd = event => console.log(newToDoInput.value) // выводим listener  в отдельную переменную
+
+button.addEventListener("click", handleAdd) // вешаем обработчик события на кнопку
+
