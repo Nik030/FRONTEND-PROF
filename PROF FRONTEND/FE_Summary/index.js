@@ -171,4 +171,6 @@ console.log(copy([1, 2, 3], 3)); // [1, 8, 27]
 // }
 
 // forEach([1, 2, 3, 4, 5, 6], function (item) {console.log("Hello my dear item", item)}, function (item) { return item > 2;});
+//
+//
 
