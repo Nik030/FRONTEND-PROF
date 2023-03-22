@@ -1,3 +1,5 @@
+// 07.03
+
 const button = document.querySelector("input[type='button']");
 const newToDoInput = document.querySelector("input[type='text']");
 const list = document.querySelector("#list");
@@ -14,13 +16,19 @@ const createToDo = (text) => {
   return newToDoContainer;
 };
 
-list.append(createToDo("Some text 1"));
-list.append(createToDo("Some text 2"));
-list.append(createToDo("Some text 3"));
+// list.append(createToDo("Some text 1"));
+// list.append(createToDo("Some text 2"));
+// list.append(createToDo("Some text 3"));
 
 const handleAdd = event => {
   console.log(newToDoInput.value); // выводим listener  в отдельную переменную
+
+  const newToDo = createToDo(newToDoInput.value);
+  list.append(newToDo);
+  localStorage.setItem("todo",newToDoInput.value)
   newToDoInput.value = "";
 };
 
 button.addEventListener("click", handleAdd); // вешаем обработчик события на кнопку
+
+ 
