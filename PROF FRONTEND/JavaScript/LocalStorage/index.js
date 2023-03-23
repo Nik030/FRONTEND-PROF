@@ -1,8 +1,11 @@
 // 07.03
 
+console.log(localStorage.getItem("todo"));
+
 const button = document.querySelector("input[type='button']");
 const newToDoInput = document.querySelector("input[type='text']");
 const list = document.querySelector("#list");
+const array = localStorage.getItem("todo") ? localStorage.getItem("todo").split(",") : [] // state
 
 
 const createToDo = (text) => {
@@ -16,18 +19,15 @@ const createToDo = (text) => {
   return newToDoContainer;
 };
 
-// list.append(createToDo("Some text 1"));
-// list.append(createToDo("Some text 2"));
-// list.append(createToDo("Some text 3"));
-
 const handleAdd = event => {
-  console.log(newToDoInput.value); // выводим listener  в отдельную переменную
-
-  const newToDo = createToDo(newToDoInput.value);
-  list.append(newToDo);
-  localStorage.setItem("todo",newToDoInput.value)
+  list.append(createToDo(newToDoInput.value));
+  array.push(newToDoInput.value);
+  localStorage.setItem("todo",array.join(",")) // записываем массив в строку (сериализация)
   newToDoInput.value = "";
 };
+
+// array.map(createToDo).forEach(el => list.append(el))
+list.append(...array.map(createToDo))
 
 button.addEventListener("click", handleAdd); // вешаем обработчик события на кнопку
 
