@@ -41,18 +41,3 @@
 
 
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const resultArray = filter(array, (el) => el % 2 === 0);
-console.log(resultArray);
-
-
-function map(array, callback) {
-    let newArr = [];
-    forEach(array, function (el, i, arr) {
-      const newEl = callback(el, i, arr);
-      newArr.push(newEl);
-    });
-    return newArr;
-  }
-  console.log(newArr);
